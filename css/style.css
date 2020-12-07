@@ -1,0 +1,62 @@
+/* Reset */
+
+body, h1, h2, h3, p, ul {
+    padding:0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+}
+/*  Menu  */
+
+.menu {
+    background: #252525;
+    padding: 20px 0;
+}
+
+/* fazendo o container do menu, eh margin 0 auto para centralizar no meio*/
+.menu-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Esse after e before eh pq como foi usado o float left, tem que usar esse clear, content, display para não definir um ta
+manho de width padrão e sim ele ficar do tamanho do conteúdo */
+.menu-container::after, .menu-container::before {
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+.menu-logo {
+    display: block;
+    /* Display block pq todo "A" nao pega inteiro, ai com o display block pega, o LEFT eh para ele ir para a esquerda e o
+    width é equivalente ao grid-4*/
+    float: left;
+    /*width: 300px;*/
+    margin-left: 10px;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+    /* esse margin right e o margin left da parte de cima, eh para o gutter, que sao 20px */
+}
+
+.menu-nav li {
+    display: inline-block;
+}
+
+.menu-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125em;  /* equivalente aos 18px, sei que eh 1.125em pq eh 18/16, sempre será 16 pq é o tamanho base */
+}
+
+.menu-nav a:hover {
+    color: #ffaa;
+}
