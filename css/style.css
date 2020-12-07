@@ -35,7 +35,7 @@ manho de width padrão e sim ele ficar do tamanho do conteúdo */
     /* Display block pq todo "A" nao pega inteiro, ai com o display block pega, o LEFT eh para ele ir para a esquerda e o
     width é equivalente ao grid-4*/
     float: left;
-    /*width: 300px;*/
+    width: 200px;
     margin-left: 10px;
 }
 
@@ -59,4 +59,33 @@ manho de width padrão e sim ele ficar do tamanho do conteúdo */
 
 .menu-nav a:hover {
     color: #ffaa;
+}
+
+
+/* INTRO */
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.intro h1 {
+    text-transform: uppercase;
+    font-size: 3em;  /* 48px dividido por 16, para dar os 3em */
+}
+
+.intro h1::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    margin: 10px auto;
+}
+
+.intro p {
+    font-style: italic;
+    font-size: 1.125em;
 }
